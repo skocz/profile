@@ -1,4 +1,3 @@
-body {
-  background: green;
-  transition: all .2s;
-}
+@import "variables";
+@import "app";
+@import "reset";
