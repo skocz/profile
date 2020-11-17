@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB,2BAAmB;EAAnB,sBAAmB;EAAnB,mBAAmB,EAAA","file":"styles.css","sourcesContent":["body {\n  background: green;\n  transition: all .2s;\n}\n"]}

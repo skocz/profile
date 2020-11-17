@@ -1,0 +1,29 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skocz/profile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skocz/profile/issues"
+  },
+  "homepage": "https://github.com/skocz/profile#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "save-dev": "0.0.1-security"
+  }
+}
