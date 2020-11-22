@@ -1,3 +1,6 @@
+html {
+    overflow-x: hidden;
+}
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -6,6 +9,7 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    transition: transform $transition-duration;
 
     .app__page {
         width: calc(100% - 12rem);

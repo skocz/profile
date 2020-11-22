@@ -1,6 +1,9 @@
 /**
 * Variables 
 */
+html {
+  overflow-x: hidden; }
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400; }
@@ -13,7 +16,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: 100vh; }
+  min-height: 100vh;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; }
   .app .app__page {
     width: calc(100% - 12rem);
     background: #fafafa;
@@ -492,5 +500,123 @@ table {
       -webkit-transform: rotate(63deg);
           -ms-transform: rotate(63deg);
               transform: rotate(63deg); }
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: red;
+  height: 3.5rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0 1rem; }
+  .navbar .navbar__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%; }
+  .navbar .navbar__section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 1rem;
+    height: 100%; }
+
+.navbar-search__input {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  left: 50%;
+  top: 1.5rem;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid #333333;
+  border-radius: 2rem;
+  -webkit-transition-property: width, top, opacity;
+  -o-transition-property: width, top, opacity;
+  transition-property: width, top, opacity;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s; }
+  .navbar-search__input:focus {
+    width: calc(100% - 26rem);
+    top: 5rem;
+    opacity: 1;
+    outline: none; }
+    .navbar-search__input:focus + .app {
+      -webkit-transform: perspective(70rem) rotateX(30deg);
+              transform: perspective(70rem) rotateX(30deg); }
+
+.navbar-search {
+  width: 3rem;
+  height: 3rem;
+  position: relative; }
+  .navbar-search .navbar-search__label-icon {
+    display: block;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+    padding: 1.5rem;
+    overflow: hidden; }
+    .navbar-search .navbar-search__label-icon:hover .navbar-search__icon {
+      color: #333333;
+      text-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+      font-size: calc(2rem + 50%); }
+    .navbar-search .navbar-search__label-icon:hover .navbar-search__name {
+      color: #333333;
+      text-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+      left: 2.5rem;
+      opacity: 1; }
+  .navbar-search .navbar-search__icon {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 2rem;
+    line-height: 1.25;
+    position: relative;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition-property: color, text-shadow, font-size;
+    -o-transition-property: color, text-shadow, font-size;
+    transition-property: color, text-shadow, font-size;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
+  .navbar-search .navbar-search__name {
+    color: rgba(0, 0, 0, 0.54);
+    line-height: 1.25;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    opacity: 0;
+    -webkit-transition-property: color, text-shadow, opacity, left;
+    -o-transition-property: color, text-shadow, opacity, left;
+    transition-property: color, text-shadow, opacity, left;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
 
 /*# sourceMappingURL=styles.css.map */

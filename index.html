@@ -15,6 +15,7 @@
 </head>
 <body>
 
+    <input type="text" name="search" class="navbar-search__input" id="search-input" placeholder="search">
     <div class="app">
 
         <input class="sidebar-toggler__checkbox" type="checkbox" id="sidebar-toggler">
@@ -172,13 +173,14 @@
             <div class="navbar">
 
                 <!-- Search bar -->
-                <div>
-                    <label>
-                        <span>Search</span>
+                <div class="navbar-search">
+                    <label for="search-input" class="navbar-search__label-icon">
+                        <i class="material-icons navbar-search__icon">search</i>
+                        <span class="navbar-search__name">Search</span>
                     </label>
                 </div>
 
-                <div>
+                <div class="navbar__wrapper">
                     <div class="navbar__section">
 
                         <!-- Zmieniarka języków -->
