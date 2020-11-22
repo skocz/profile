@@ -11,6 +11,9 @@ body {
         width: calc(100% - 12rem);
         background: #fafafa;
         box-shadow: 0 12px 20px rgba(0, 0, 0, .2);
+        position: relative;
+        z-index: 1;
+        transition: width $transition-duration;
     }
 
 }

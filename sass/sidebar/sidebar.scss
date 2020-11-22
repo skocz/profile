@@ -2,6 +2,8 @@
     width: 12rem;
     background: $grey-50;
     border-right: 2px black solid;
+    transition: width $transition-duration;
+    position: relative;
 
     .sidebar__section{
     	display: flex;

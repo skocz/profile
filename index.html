@@ -17,14 +17,19 @@
 
     <div class="app">
 
+        <input class="sidebar-toggler__checkbox" type="checkbox" id="sidebar-toggler">
         <div class="sidebar">
+
+            <label for="sidebar-toggler" class="sidebar-toggler">
+                <i class="sidebar-toggler__icon"></i>
+            </label>
 
             <!-- Logo -->
             <div class="sidebar__section">
               <div class="sidebar-logo">
-                <h1 class="sidebar-logo__text"><a href="#" class="sidebar-logo__wrapper">
-                  Welcome
-                </a></h1>
+                <a href="#" class="sidebar-logo__wrapper"><h1 class="sidebar-logo__text">
+                  Welcome</h1>
+                </a>
              </div>
             </div>
 
@@ -53,7 +58,7 @@
             <!-- Navigation #1 -->
             <section class="sidebar__section">
                 <div class="sidebar-nav">
-                    <h4 class="sidebar-nav__header">Navigation</h4>
+                    <h4 class="sidebar-nav__header" data-toggled-abbr="Nav">Navigation</h4>
                     <ul>
                         <li>
                             <a href="#" class="sidebar-nav__item sidebar-nav__item--primary">
@@ -95,7 +100,7 @@
             <!-- Navigation #2 -->
             <section class="sidebar__section">
                 <div class="sidebar-nav">
-                    <h4 class="sidebar-nav__header">Community</h4>
+                    <h4 class="sidebar-nav__header" data-toggled-abbr="Com">Communication</h4>
                     <ul>
                         <li>
                             <a href="#" class="sidebar-nav__item sidebar-nav__item--secondary sidebar-nav__item--alert">
@@ -138,7 +143,7 @@
             <!-- Navigation #3 -->
             <section class="sidebar__section">
                 <div class="sidebar-nav">
-                    <h4 class="sidebar-nav__header">Settings</h4>
+                    <h4 class="sidebar-nav__header" data-toggled-abbr="Set">Settings</h4>
                     <ul>
                         <li>
                             <a href="#" class="sidebar-nav__item">

@@ -12,6 +12,7 @@
 		overflow: hidden;
 		border-radius: 55%;
 		box-shadow: $shadow-20;
+		transition: width $transition-duration, height $transition-duration;
 
 		&:hover {
 			.sidebar-user__overlay { opacity: 1; }
@@ -60,7 +61,7 @@
 	.sidebar-user__name {
 		font-weight: $font-weight-bold;
 		color: $dark-secondary;
-		transition: color $transition-duration;
+		transition: color $transition-duration, font-size $transition-duration;
 
 		&:hover, &:focus { color: $primary; }
 
@@ -74,6 +75,7 @@
 		justify-content: center;
 		align-items: center;
 		color: $dark-disabled;
+		transition: font-size $transition-duration;
 
 		&:after {
 			content: '';
