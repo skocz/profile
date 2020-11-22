@@ -34,6 +34,8 @@
 
                     <!-- user's Avatar -->
                     <div class="sidebar-user__avatar-wrapper">
+                        <!-- https://unsplash.com/photos/YA7JJrY1cF0 link to the photo -->
+                        <!-- https://unsplash.com/photos/7H5y2tmh0aU -->
                         <img class="sidebar-user__avatar" src="photos/vlad-kutepov-YA7JJrY1cF0-unsplash.jpg" alt="User">
                         <a href="#" class="sidebar-user__overlay"><i class="material-icons sidebar-user__icon">add_a_photo </i>
                         </a>
@@ -50,23 +52,41 @@
 
             <!-- Navigation #1 -->
             <section class="sidebar__section">
-                <div>
-                    <h4>Navigation</h4>
+                <div class="sidebar-nav">
+                    <h4 class="sidebar-nav__header">Navigation</h4>
                     <ul>
                         <li>
-                            <a href="#">
-                              <i class="material-icons">favorite</i>
-                              <span>Home</span>
+                            <a href="#" class="sidebar-nav__item">
+                                    <i class="material-icons sidebar-nav__icon">favorite</i>
+                                <div class="sidebar-nav__icon-wrapper">
+                                </div>
+                              <span class="sidebar-nav__title">Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#"><span>Users</span></a>
+                            <a href="#" class="sidebar-nav__item">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">face</i>
+                                </div>
+                                <span class="sidebar-nav__title">Users</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><span>Favorite</span></a>
+                            <a href="#" class="sidebar-nav__item">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">favorite</i>
+                                </div>
+                                <span class="sidebar-nav__title">Favorite</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><span>Widgets</span></a>
+                            <a href="#" class="sidebar-nav__item">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">widgets</i>
+                                </div>
+                                <span class="sidebar-nav__title">Widgets</span>
+                                <span class="sidebar-nav__notification">New</span>
+                            </a>
                         </li>
                     </ul>
                 </div>

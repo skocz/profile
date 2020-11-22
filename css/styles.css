@@ -211,4 +211,65 @@ table {
       .sidebar-user .sidebar-user__status.sidebar-user__status--online:after {
         background: #8BC34A; }
 
+.sidebar-nav {
+  width: 100%; }
+  .sidebar-nav .sidebar-nav__header {
+    padding: .5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: yellow; }
+  .sidebar-nav .sidebar-nav__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    height: 2.5rem;
+    position: relative; }
+    .sidebar-nav .sidebar-nav__item:hover, .sidebar-nav .sidebar-nav__item:focus {
+      outline: none; }
+      .sidebar-nav .sidebar-nav__item:hover .sidebar-nav__icon,
+      .sidebar-nav .sidebar-nav__item:hover .sidebar-nav__title, .sidebar-nav .sidebar-nav__item:focus .sidebar-nav__icon,
+      .sidebar-nav .sidebar-nav__item:focus .sidebar-nav__title {
+        color: red; }
+    .sidebar-nav .sidebar-nav__item:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: red;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      opacity: 0; }
+    .sidebar-nav .sidebar-nav__item:hover:before, .sidebar-nav .sidebar-nav__item:focus:before {
+      left: 0;
+      opacity: 1;
+      width: .2rem;
+      -webkit-transition: left .1s, width .15s .1s, opacity 2s;
+      -o-transition: left .1s, width .15s .1s, opacity 2s;
+      transition: left .1s, width .15s .1s, opacity 2s; }
+  .sidebar-nav .sidebar-nav__icon-wrapper {
+    position: relative;
+    margin-right: 1rem;
+    width: 1.5rem; }
+  .sidebar-nav .material-icons {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.54);
+    -webkit-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    transition: color 0.2s; }
+  .sidebar-nav .sidebar-nav__title {
+    -webkit-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    transition: color 0.2s; }
+
 /*# sourceMappingURL=styles.css.map */
