@@ -442,7 +442,7 @@ table {
     .sidebar-toggler__checkbox:checked + .sidebar .sidebar-nav__header::before {
       content: attr(data-toggled-abbr);
       text-transform: uppercase;
-      margin-right: 2rem; }
+      margin-right: 2.5rem; }
     .sidebar-toggler__checkbox:checked + .sidebar .sidebar-nav__item {
       z-index: 2;
       overflow: hidden;

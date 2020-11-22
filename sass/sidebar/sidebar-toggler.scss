@@ -36,7 +36,7 @@
 				&::before {
 					content: attr(data-toggled-abbr);
 					text-transform: uppercase;
-					margin-right: 2rem; //push the full name out of view
+					margin-right: 2.5rem; //push the full name out of view
 				}
 			}
 
