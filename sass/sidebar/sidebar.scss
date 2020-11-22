@@ -1,6 +1,7 @@
 .sidebar {
     width: 12rem;
-    background: #8c8c8c;
+    background: $grey-50;
+    border-right: 2px black solid;
 
     .sidebar__section{
     	display: flex;
