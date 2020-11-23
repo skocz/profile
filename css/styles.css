@@ -252,6 +252,33 @@ table {
       color: #8BC34A; }
       .sidebar-user .sidebar-user__status.sidebar-user__status--online:after {
         background: #8BC34A; }
+  .sidebar-user.sidebar-user--mini {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .sidebar-user.sidebar-user--mini .sidebar-user__avatar-wrapper {
+      width: 2rem;
+      height: 2rem; }
+    .sidebar-user.sidebar-user--mini .sidebar-user__name-wrapper {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      margin-top: .25rem;
+      margin-left: .5rem; }
+    .sidebar-user.sidebar-user--mini .sidebar-user__name {
+      font-weight: 400; }
+    .sidebar-user.sidebar-user--mini .sidebar-user__status {
+      margin: 0;
+      position: relative; }
+      .sidebar-user.sidebar-user--mini .sidebar-user__status::after {
+        position: absolute;
+        bottom: 0;
+        left: -1rem;
+        margin-left: 0;
+        border: 1px solid #fff; }
+    .sidebar-user.sidebar-user--mini .sidebar-user__icon {
+      font-size: 1rem; }
 
 @-webkit-keyframes alert-pulse {
   20% {
