@@ -5,6 +5,13 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
+
+span, p {
+    color: $primary;
+    font-size: $font-size-xs;
+    line-height: 1.25;
+}
+
 .app {
     display: flex;
     flex-direction: row;

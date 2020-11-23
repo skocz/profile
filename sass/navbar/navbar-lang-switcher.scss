@@ -1,0 +1,180 @@
+.navbar-lang-switcher {
+	position: relative;
+	height: 100%;
+
+	&:hover {
+
+		.navbar-lang-switcher__flag-wrapper {
+			height: 3rem;
+			opacity: 1;
+		}
+	}
+
+	.navbar-lang-switcher__flag-list {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		background: rgba($light, .9);
+		box-shadow: $shadow-20;
+		overflow: hidden;
+		margin-left: -1rem;
+	}
+
+	.navbar-lang-switcher__flag-wrapper {
+		display: flex;
+		align-items: center;
+		height: 0;
+		opacity: 0;
+		transition-property: height, opacity, box-shadow;
+		transition-duration: $transition-duration;
+
+		&:not(.navbar-lang-switcher__flag-wrapper--active) {
+
+			padding: 0 1rem;
+
+			&:hover, &:focus {
+				background: #f5f5f5;
+				box-shadow: $shadow-20;
+			}
+
+		}
+
+		&.navbar-lang-switcher__flag-wrapper--active {
+			height: 100%;
+			opacity: 1;
+			
+			&::after {
+				content: 'keyboard_arrow_down';
+				font-family: 'Material Icons';
+				color: $primary;
+			}
+		}
+	}
+
+	.navbar-lang-switcher__flag {
+		width: 1.75rem;
+		height: 1.75rem;
+		border-radius: 50%;
+		box-shadow: $shadow-20;
+		position: relative;
+		overflow: hidden; //contain flag elements in the circle 
+
+		&.navbar-lang-switcher__flag--poland {
+			background: linear-gradient(to bottom, //from top to bottom
+				#fff 50%, //0-50%  - white
+				red 50% // 50% -100% red 
+			);
+		}
+
+		&.navbar-lang-switcher__flag--italy {
+			background: linear-gradient(to right, 
+				green 33%,
+				white 33%, white 66%,
+				red 66%
+			);
+		}
+		&.navbar-lang-switcher__flag--greece {
+			background: linear-gradient(to bottom,
+				blue 11%,
+				white 11%, white 22%,
+				blue 22%, blue 33%,
+				white 33%, white 44%,
+				blue 44%, blue 55%,
+				white 55%, white 66%,
+				blue 66%, blue 77%,
+				white 77%, white 88%,
+				blue 88%
+			);
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 50%;
+				height: 50%;
+				background: 
+					linear-gradient(to bottom,
+						transparent 40%,
+						white 40%, white 60%,
+						transparent 60%
+					),
+					linear-gradient(to right,
+						blue 40%,
+						white 40%, white 60%,
+						blue 60%
+					);
+			}
+		}
+
+		&.navbar-lang-switcher__flag--cech {
+			background: linear-gradient(to bottom, //from top to bottom
+				#fff 50%, //0-50%  - white
+				red 50% // 50% -100% red 
+			);
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 50%;
+				height: 100%;
+				background: blue;
+				clip-path: polygon(0 0, 0 100%, 100% 50%); //https://bennettfeely.com/clippy/
+			}
+		}
+
+		&.navbar-lang-switcher__flag--german {
+			background: linear-gradient(to bottom, //from top to bottom
+				black 33%, 
+				red 33%, red 66%,
+				yellow 66%
+			);
+		}
+
+		&.navbar-lang-switcher__flag--us {
+			background: linear-gradient(to bottom,
+				red 11%,
+				white 11%, white 22%,
+				red 22%, red 33%,
+				white 33%, white 44%,
+				red 44%, red 55%,
+				white 55%, white 66%,
+				red 66%,  red 77%,
+				white 77%, white 88%,
+				red 88%
+				);
+
+			&::before { 
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 70%;
+				height: 68%;
+				background: blue;
+			 }
+
+			 &::after {
+			 	content: '\2605';
+			 	position: absolute;
+			 	top: 0;
+			 	left: -.45rem;
+			 	color: white;
+			 	font-size: .375rem;
+			 	text-shadow: 
+			 		.45rem 0 0 white, .9rem 0 0 white, 1.35rem 0 0 white, //righ  (X)
+			 		.675rem .225rem 0 white, 1.125rem .225rem 0 white, // from right and top (X,Y)
+			 		.45rem .45rem 0 white, .9rem .45rem white, 1.35rem .45rem 0 white;
+			 		// .675rem .675rem 0 white, 1.125rem .675rem 0 white;
+			 }
+		}
+	}
+
+	.lang_switcher__country-name {
+		white-space: nowrap;
+		margin-left: .5rem; 
+	}
+
+}

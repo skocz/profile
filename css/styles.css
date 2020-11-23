@@ -8,6 +8,11 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400; }
 
+span, p {
+  color: #333333;
+  font-size: 0.75rem;
+  line-height: 1.25; }
+
 .app {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,5 +623,122 @@ table {
     -webkit-transition-duration: 0.2s;
          -o-transition-duration: 0.2s;
             transition-duration: 0.2s; }
+
+.navbar-lang-switcher {
+  position: relative;
+  height: 100%; }
+  .navbar-lang-switcher:hover .navbar-lang-switcher__flag-wrapper {
+    height: 3rem;
+    opacity: 1; }
+  .navbar-lang-switcher .navbar-lang-switcher__flag-list {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: -1rem; }
+  .navbar-lang-switcher .navbar-lang-switcher__flag-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 0;
+    opacity: 0;
+    -webkit-transition-property: height, opacity, -webkit-box-shadow;
+    transition-property: height, opacity, -webkit-box-shadow;
+    -o-transition-property: height, opacity, box-shadow;
+    transition-property: height, opacity, box-shadow;
+    transition-property: height, opacity, box-shadow, -webkit-box-shadow;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
+    .navbar-lang-switcher .navbar-lang-switcher__flag-wrapper:not(.navbar-lang-switcher__flag-wrapper--active) {
+      padding: 0 1rem; }
+      .navbar-lang-switcher .navbar-lang-switcher__flag-wrapper:not(.navbar-lang-switcher__flag-wrapper--active):hover, .navbar-lang-switcher .navbar-lang-switcher__flag-wrapper:not(.navbar-lang-switcher__flag-wrapper--active):focus {
+        background: #f5f5f5;
+        -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2); }
+    .navbar-lang-switcher .navbar-lang-switcher__flag-wrapper.navbar-lang-switcher__flag-wrapper--active {
+      height: 100%;
+      opacity: 1; }
+      .navbar-lang-switcher .navbar-lang-switcher__flag-wrapper.navbar-lang-switcher__flag-wrapper--active::after {
+        content: 'keyboard_arrow_down';
+        font-family: 'Material Icons';
+        color: #333333; }
+  .navbar-lang-switcher .navbar-lang-switcher__flag {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden; }
+    .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--poland {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, red));
+      background: -o-linear-gradient(top, #fff 50%, red 50%);
+      background: linear-gradient(to bottom, #fff 50%, red 50%); }
+    .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--italy {
+      background: -webkit-gradient(linear, left top, right top, color-stop(33%, green), color-stop(33%, white), color-stop(66%, white), color-stop(66%, red));
+      background: -o-linear-gradient(left, green 33%, white 33%, white 66%, red 66%);
+      background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%); }
+    .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--greece {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(11%, blue), color-stop(11%, white), color-stop(22%, white), color-stop(22%, blue), color-stop(33%, blue), color-stop(33%, white), color-stop(44%, white), color-stop(44%, blue), color-stop(55%, blue), color-stop(55%, white), color-stop(66%, white), color-stop(66%, blue), color-stop(77%, blue), color-stop(77%, white), color-stop(88%, white), color-stop(88%, blue));
+      background: -o-linear-gradient(top, blue 11%, white 11%, white 22%, blue 22%, blue 33%, white 33%, white 44%, blue 44%, blue 55%, white 55%, white 66%, blue 66%, blue 77%, white 77%, white 88%, blue 88%);
+      background: linear-gradient(to bottom, blue 11%, white 11%, white 22%, blue 22%, blue 33%, white 33%, white 44%, blue 44%, blue 55%, white 55%, white 66%, blue 66%, blue 77%, white 77%, white 88%, blue 88%); }
+      .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--greece::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 50%;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, white), color-stop(60%, white), color-stop(60%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(40%, blue), color-stop(40%, white), color-stop(60%, white), color-stop(60%, blue));
+        background: -o-linear-gradient(top, transparent 40%, white 40%, white 60%, transparent 60%), -o-linear-gradient(left, blue 40%, white 40%, white 60%, blue 60%);
+        background: linear-gradient(to bottom, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(to right, blue 40%, white 40%, white 60%, blue 60%); }
+    .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--cech {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, red));
+      background: -o-linear-gradient(top, #fff 50%, red 50%);
+      background: linear-gradient(to bottom, #fff 50%, red 50%); }
+      .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--cech::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: blue;
+        -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+                clip-path: polygon(0 0, 0 100%, 100% 50%); }
+    .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--german {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(33%, black), color-stop(33%, red), color-stop(66%, red), color-stop(66%, yellow));
+      background: -o-linear-gradient(top, black 33%, red 33%, red 66%, yellow 66%);
+      background: linear-gradient(to bottom, black 33%, red 33%, red 66%, yellow 66%); }
+    .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--us {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(11%, red), color-stop(11%, white), color-stop(22%, white), color-stop(22%, red), color-stop(33%, red), color-stop(33%, white), color-stop(44%, white), color-stop(44%, red), color-stop(55%, red), color-stop(55%, white), color-stop(66%, white), color-stop(66%, red), color-stop(77%, red), color-stop(77%, white), color-stop(88%, white), color-stop(88%, red));
+      background: -o-linear-gradient(top, red 11%, white 11%, white 22%, red 22%, red 33%, white 33%, white 44%, red 44%, red 55%, white 55%, white 66%, red 66%, red 77%, white 77%, white 88%, red 88%);
+      background: linear-gradient(to bottom, red 11%, white 11%, white 22%, red 22%, red 33%, white 33%, white 44%, red 44%, red 55%, white 55%, white 66%, red 66%, red 77%, white 77%, white 88%, red 88%); }
+      .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--us::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70%;
+        height: 68%;
+        background: blue; }
+      .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--us::after {
+        content: '\2605';
+        position: absolute;
+        top: 0;
+        left: -.45rem;
+        color: white;
+        font-size: .375rem;
+        text-shadow: 0.45rem 0 0 white, 0.9rem 0 0 white, 1.35rem 0 0 white, 0.675rem 0.225rem 0 white, 1.125rem 0.225rem 0 white, 0.45rem 0.45rem 0 white, 0.9rem 0.45rem white, 1.35rem 0.45rem 0 white; }
+  .navbar-lang-switcher .lang_switcher__country-name {
+    white-space: nowrap;
+    margin-left: .5rem; }
 
 /*# sourceMappingURL=styles.css.map */
