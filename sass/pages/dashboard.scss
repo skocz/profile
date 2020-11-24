@@ -1,0 +1,35 @@
+.dashboard {
+
+	margin: 0 2rem;
+
+	.dashboard__heading {
+		margin-bottom: 2rem;
+
+		&.dashboard__heading--main {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.dashboard__section {
+		box-shadow: $shadow-10;
+		padding: 2rem 1rem;
+		margin-top: 2rem;
+		background: white;
+		border-radius: .25rem;
+
+		&.dashboard__section--small {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+
+		}
+
+		&.dashboard__section--transparent {
+			background:  #fafafa;
+			box-shadow: none;
+		}
+
+
+
+	}
+}
