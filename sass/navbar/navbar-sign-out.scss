@@ -1,0 +1,99 @@
+.navbar-sign-out {
+	height: 100%;
+
+	.navbar-sign-out__button {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		position:relative;
+		
+		&:hover, &:focus {
+
+			.navbar-sign-out__icon {
+				opacity: 0;
+				
+				&:nth-of-type(2) {
+					opacity: 1;
+				}
+
+			}
+
+			.navbar-sign-out__letters-wrapper {
+
+				.navbar-sign-out__letter {
+					color: pink;
+					opacity: 0;
+
+					&:nth-of-type(odd) { transform: translateY(-100%); }
+					&:nth-of-type(even) { transform: translateY(100%); }
+
+				}
+
+				&.navbar-sign-out__letters-wrapper-toggler .navbar-sign-out__letter {
+					transform: translateY(0);
+					opacity: 1;
+				}
+
+			}
+
+		}
+
+	}
+
+	.navbar-sign-out__icon {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: $font-size-lg;
+		opacity: 1;
+		color: $primary;
+		transition-property: opacity, color;
+		transition-duration: $transition-duration;
+
+		&:nth-of-type(2) { opacity: 0; }
+	}
+
+	.navbar-sign-out__letters-wrapper { 
+		display: flex;
+		flex-direction: row;
+		align-items: center; // w poziomie
+		height: 100%;
+		margin-left: 1.5rem;
+
+		&.navbar-sign-out__letters-wrapper-toggler {
+			position: absolute;
+			left: 0;
+			top: 0;
+			//see you letters
+			.navbar-sign-out__letter {
+				opacity: 0;
+				
+				&:nth-of-type(odd) { transform: translateY(-100%); }
+				&:nth-of-type(even) { transform: translateY(100%); }
+					 
+			}
+
+		}
+
+	}
+
+	.navbar-sign-out__letter {
+		color: $primary;
+		opacity: 1;
+		transition-property: transform, opacity, color;
+		transition-duration: $transition-duration;	
+
+		&:nth-of-type(1) { transition-delay: 0s; }
+		&:nth-of-type(2) { transition-delay: .025s; }
+		&:nth-of-type(3) { transition-delay: .05s; }
+		&:nth-of-type(4) { transition-delay: .075s; }
+		&:nth-of-type(5) { transition-delay: .1s; }
+		&:nth-of-type(6) { transition-delay: .125s; }
+		&:nth-of-type(7) { transition-delay: .15s; }
+		&:nth-of-type(8) { transition-delay: .175s; }
+		&:nth-of-type(9) { transition-delay: .2s; }
+		&:nth-of-type(10) { transition-delay: .225s; }
+		&:nth-of-type(11) { transition-delay: .25s; }
+	}
+}
