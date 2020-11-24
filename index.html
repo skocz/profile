@@ -314,13 +314,13 @@
                                     <table class="table">
                                         <thead class="table__thead">
                                             <tr>
-                                                <th class="table__th">Actions</th>
+                                                <th class="table__th table__th--sort-asc">Actions</th>
                                                 <th class="table__th">ID</th>
                                                 <th class="table__th">First Name</th>
                                                 <th class="table__th">Last Name</th>
                                                 <th class="table__th">Email</th>
-                                                <th class="table__th">Created</th>
-                                                <th class="table__th">Onboarding</th>
+                                                <th class="table__th table__th--sort-asc">Created</th>
+                                                <th class="table__th table__th--not-sortable">Onboarding</th>
                                                  <th class="table__th"><i class="material-icons">playlist_add</i></th>
                                             </tr>
                                         </thead>
@@ -336,9 +336,18 @@
                                                 <td class="table__td">email</td>
                                                 <td class="table__td">24/11/2020</td>
                                                 <td class="table__td">
-                                                    <span class="table__onboarding">Pending</span>
+                                                    <span class="table__onboarding table__onboarding--pending">Pending</span>
                                                 </td>
-                                                <td class="table__td"><label for="" class="table__dots">...</label></td>
+                                                <td class="table__td">
+                                                    <input type="checkbox" id="more-actions" class="table__toggler">
+                                                    <label for="more-actions" class="table__dots"></label>
+                                                    <ul class="table__more-actions">
+                                                        <li class="table__action table__action--edit">Edit</li>
+                                                        <li class="table__action table__action--remove">Remove</li>
+                                                        <li class="table__action table__action--email">Send Email</li>
+                                                        <li class="table__action table__action--note">Add note</li>
+                                                    </ul>
+                                                </td>
                                             </tr>
                                             <tr class="table__tr">
                                                 <td class="table__td">
@@ -350,7 +359,7 @@
                                                 <td class="table__td">Szzzzzz</td>
                                                 <td class="table__td">email.sz</td>
                                                 <td class="table__td">12/00/2018</td>
-                                                <td class="table__td"><span class="table__onboarding">Pending</span></td>
+                                                <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
                                                 <td class="table__td"><label class="table__dots">...</label></td>
                                              </tr>
                                             <tr class="table__tr">
@@ -363,7 +372,7 @@
                                                 <td class="table__td">J</td>
                                                 <td class="table__td">email.js</td>
                                                 <td class="table__td">12/07/2020</td>
-                                                <td class="table__td"><span class="table__onboarding">Pending</span></td>
+                                                <td class="table__td"><span class="table__onboarding table__onboarding--pending table__onboarding--completed ">Pending</span></td>
                                                 <td class="table__td"><label class="table__dots">...</label></td>
                                             </tr>
                                         </tbody>

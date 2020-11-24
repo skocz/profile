@@ -300,6 +300,63 @@ table {
 
 .table {
   width: 100%; }
+  .table .table__th {
+    padding: 0 .25rem;
+    height: 2.5rem;
+    vertical-align: top;
+    font-size: 0.9rem;
+    text-align: left;
+    font-weight: 700; }
+    .table .table__th:nth-of-type(1) {
+      width: 5rem; }
+    .table .table__th:not(.table__th--not-sortable) {
+      cursor: pointer;
+      -webkit-transition: color 0.2s;
+      -o-transition: color 0.2s;
+      transition: color 0.2s; }
+      .table .table__th:not(.table__th--not-sortable):hover {
+        color: brown; }
+        .table .table__th:not(.table__th--not-sortable):hover::after {
+          opacity: 1; }
+      .table .table__th:not(.table__th--not-sortable)::after {
+        content: 'arrow_drop_up';
+        font-family: 'Material Icons';
+        display: inline-block;
+        font-size: 1rem;
+        position: relative;
+        top: .2rem;
+        opacity: 0;
+        -webkit-transition-property: opacity, -webkit-transform;
+        transition-property: opacity, -webkit-transform;
+        -o-transition-property: opacity, transform;
+        transition-property: opacity, transform;
+        transition-property: opacity, transform, -webkit-transform;
+        -webkit-transition-duration: 0.2s;
+             -o-transition-duration: 0.2s;
+                transition-duration: 0.2s; }
+    .table .table__th.table__th--sort-asc {
+      color: #333333; }
+      .table .table__th.table__th--sort-asc::after {
+        opacity: 1; }
+      .table .table__th.table__th--sort-asc:hover {
+        color: #333333; }
+        .table .table__th.table__th--sort-asc:hover::after {
+          -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+                  transform: rotate(180deg); }
+    .table .table__th.table__th--sort-dec {
+      color: #333333; }
+      .table .table__th.table__th--sort-dec::after {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+        opacity: 1; }
+      .table .table__th.table__th--sort-dec:hover {
+        color: #333333; }
+        .table .table__th.table__th--sort-dec:hover::after {
+          -webkit-transform: rotate(0);
+              -ms-transform: rotate(0);
+                  transform: rotate(0); }
   .table .table__tr {
     border-bottom: 1px solid grey; }
     .table .table__tr:nth-of-type(even) {
@@ -308,7 +365,8 @@ table {
     padding: 0 .25rem;
     height: 3.5rem;
     vertical-align: middle;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    position: relative; }
   .table .table__action-icon {
     cursor: pointer;
     font-size: 1.25rem;
@@ -320,6 +378,112 @@ table {
     margin: -.5rem -.25rem; }
     .table .table__action-icon:hover, .table .table__action-icon:focus {
       color: #333333; }
+  .table .table__onboarding {
+    background: red;
+    display: block;
+    width: 6rem;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 1rem;
+    color: white; }
+    .table .table__onboarding.table__onboarding--pending {
+      background: -o-linear-gradient(45deg, green 0, #00cd00 75%, green 100%);
+      background: linear-gradient(45deg, green 0, #00cd00 75%, green 100%); }
+    .table .table__onboarding.table__onboarding--completed {
+      background: -o-linear-gradient(45deg, #333333 0, #5e5e5e 50%, #333333 100%);
+      background: linear-gradient(45deg, #333333 0, #5e5e5e 50%, #333333 100%); }
+  .table .table__dots {
+    cursor: pointer;
+    display: inline-block;
+    padding: .5rem; }
+    .table .table__dots::before {
+      content: '';
+      display: block;
+      width: .3rem;
+      height: .3rem;
+      background: grey;
+      border-radius: 50%;
+      -webkit-box-shadow: -.5rem 0 0 0 grey, .5rem 0 0 0 grey;
+              box-shadow: -.5rem 0 0 0 grey, .5rem 0 0 0 grey;
+      -webkit-transition-property: background, -webkit-box-shadow;
+      transition-property: background, -webkit-box-shadow;
+      -o-transition-property: box-shadow, background;
+      transition-property: box-shadow, background;
+      transition-property: box-shadow, background, -webkit-box-shadow;
+      -webkit-transition-duration: 0.2s;
+           -o-transition-duration: 0.2s;
+              transition-duration: 0.2s; }
+    .table .table__dots:hover::before {
+      background: #333333;
+      -webkit-box-shadow: -0.5rem 0 0 0 #333333, 0.5rem 0 0 0 #333333;
+              box-shadow: -0.5rem 0 0 0 #333333, 0.5rem 0 0 0 #333333; }
+  .table .table__toggler {
+    position: absolute;
+    z-index: -10; }
+    .table .table__toggler:checked + .table__dots::before {
+      background: #333333;
+      -webkit-box-shadow: 0 -0.5rem 0 0 #333333, -0.5rem 0.25rem 0 0 #333333, 0.5rem 0.25rem 0 0 #333333, -0.25rem 0.5rem 0 0 #333333, 0.25rem 0.5rem 0 0 #333333, 0rem 0.75rem 0 0 #333333;
+              box-shadow: 0 -0.5rem 0 0 #333333, -0.5rem 0.25rem 0 0 #333333, 0.5rem 0.25rem 0 0 #333333, -0.25rem 0.5rem 0 0 #333333, 0.25rem 0.5rem 0 0 #333333, 0rem 0.75rem 0 0 #333333; }
+    .table .table__toggler:checked ~ .table__more-actions .table__action {
+      height: 3rem;
+      opacity: 1; }
+  .table .table__more-actions {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 100%;
+    background: white;
+    -webkit-box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
+  .table .table__action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 0m;
+    padding-left: 3rem;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: background 0.2s, height 0.4s, opacity 0.2s, -webkit-box-shadow 0.4s;
+    transition: background 0.2s, height 0.4s, opacity 0.2s, -webkit-box-shadow 0.4s;
+    -o-transition: background 0.2s, box-shadow 0.4s, height 0.4s, opacity 0.2s;
+    transition: background 0.2s, box-shadow 0.4s, height 0.4s, opacity 0.2s;
+    transition: background 0.2s, box-shadow 0.4s, height 0.4s, opacity 0.2s, -webkit-box-shadow 0.4s; }
+    .table .table__action::before {
+      font-family: 'Material Icons';
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      -webkit-transform: translate(-50%);
+          -ms-transform: translate(-50%);
+              transform: translate(-50%);
+      font-size: 1.25rem; }
+    .table .table__action.table__action--edit::before {
+      content: 'edit'; }
+    .table .table__action.table__action--remove::before {
+      content: 'delete'; }
+    .table .table__action.table__action--email::before {
+      content: 'mail'; }
+    .table .table__action.table__action--note::before {
+      content: 'note_add'; }
+    .table .table__action:hover {
+      z-index: 1;
+      background-color: grey;
+      -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+              box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2); }
 
 .sidebar {
   width: 12rem;
