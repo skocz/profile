@@ -1,0 +1,34 @@
+@keyframes button-hover {
+	50% { background-position: 0 0; }
+	
+}
+
+.button { 
+	display: inline-block;
+	color: white;
+	padding: 1rem;
+	font-size: $font-size-md;
+	border-radius: $font-size-md * 2;
+	box-shadow: $shadow-primary;
+	cursor: pointer;
+    background: linear-gradient(45deg,
+            red 0,
+            lighten(pink, 17%) 50%,
+            red
+    ) 100% 0;
+	background-size: 300% 300%;
+
+	&:hover, &:focus {
+		color: #c0c0c0;
+		animation: button-hover 1s ease;
+	}
+
+	&.button--secondary {
+		background-image: linear-gradient(45deg,
+            darken(pink, 10%) 0,
+            lighten(pink, 17%) 75%,
+            green 100%
+    	);
+    	box-shadow: $shadow-secondary;
+	}
+}
