@@ -1,69 +1,6 @@
 .sidebar-toggler__checkbox {
 	position: absolute;
 	z-index: -10;
-	
-	&:checked {
-
-		+ .sidebar {
-			width: 4.6rem;
-
-			.sidebar-toggler {
-				width: 100%;
-				height: 3rem;
-			}
-
-			.sidebar-toggler__icon {
-				&::before { transform: rotate(63deg); }
-				&::after {transform: rotate(-63deg); }
-			}
-
-			.sidebar-logo__wrapper {
-				height: 0;
-				overflow: hidden;
-			}
-
-			.sidebar-sure { padding: 0 .25rem; }
-
-			.sidebar-user__avatar-wrapper {
-				width: 3rem;
-				height: 3rem;
-			}
-
-			.sidebar-user__name, .sidebar-user__status  { font-size: $font-size-xxs; }
-
-			.sidebar-nav__header {
-
-				&::before {
-					content: attr(data-toggled-abbr);
-					text-transform: uppercase;
-					margin-right: 2.5rem; //push the full name out of view
-				}
-			}
-
-            .sidebar-nav__item {
-                z-index: 2;
-                overflow: hidden;
-                width: 3.5rem;
-
-                &:hover, &:focus {
-                    background: $grey-50;
-                    width: 10rem;
-                    box-shadow: $shadow-10;
-                }
-
-            }
-
-            .sidebar-nav__notification {
-                right: .25rem;
-                top: .25rem;
-                padding: .1rem .25rem;
-                font-size: .5rem;
-            }}
-
-        ~ .app__page {
-        	width: calc(100% - 3.5rem);
-    	}
-	}
 }
 
 
@@ -109,5 +46,109 @@
 		}
 
 	}
-
 }
+@media (min-width:768px ) {
+
+	.sidebar-toggler__checkbox {
+		&:checked {
+
+			+ .sidebar {
+				width: 4.6rem;
+
+				.sidebar-toggler {
+					width: 100%;
+					height: 3rem;
+				}
+
+				.sidebar-toggler__icon {
+					&::before { transform: rotate(63deg); }
+					&::after {transform: rotate(-63deg); }
+				}
+
+				.sidebar-logo__wrapper {
+					height: 0;
+					overflow: hidden;
+				}
+
+				.sidebar-sure { padding: 0 .25rem; }
+
+				.sidebar-user__avatar-wrapper {
+					width: 3rem;
+					height: 3rem;
+				}
+
+				.sidebar-user__name, .sidebar-user__status  { font-size: $font-size-xxs; }
+
+				.sidebar-nav__header {
+
+					&::before {
+						content: attr(data-toggled-abbr);
+						text-transform: uppercase;
+						margin-right: 2.5rem; //push the full name out of view
+					}
+				}
+
+	            .sidebar-nav__item {
+	                z-index: 2;
+	                overflow: hidden;
+	                width: 3.5rem;
+
+	                &:hover, &:focus {
+	                    background: $grey-50;
+	                    width: 10rem;
+	                    box-shadow: $shadow-10;
+	                }
+
+	            }
+
+	            .sidebar-nav__notification {
+	                right: .25rem;
+	                top: .25rem;
+	                padding: .1rem .25rem;
+	                font-size: .5rem;
+	            }
+	        }
+
+	        ~ .app__page {
+	        	width: calc(100% - 3.5rem);
+	    	}
+		}
+	}
+	
+}
+
+@media (max-width:767px ) {
+
+	.sidebar-toggler__checkbox {
+		&:checked {
+
+			+ .sidebar {
+				height: 100vh;
+			}
+		}
+	}
+
+	.sidebar-toggler {
+		right: .5rem;
+		top: .5rem;
+
+		.sidebar-toggler__icon {
+			height: 3px;
+			width: 20px;
+			background: #fafafa;
+
+			&::before, &::after {
+				transform: none;
+				height: 3px;
+				width: 20px;
+			}
+
+			&::before { top: -6px; }
+			&::after { top: 6px; }
+
+		}
+
+	}
+	
+}
+

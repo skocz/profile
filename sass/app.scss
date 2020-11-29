@@ -52,3 +52,16 @@ h3 {
     }
 
 }
+@media (max-width: 48rem) { //768px
+
+    .app {
+        flex-direction: column;
+
+        .app__page {
+            width: 100%;
+            padding-top: 3rem;
+        }
+    }
+
+    
+}
