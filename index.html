@@ -495,29 +495,36 @@
                                     </div>
 
                                     <div class="pie-chart-nav">
-                                        <label class="pie-chart-nav__name" for="">A</label>
-                                        <label class="pie-chart-nav__name" for="">B</label>
-                                        <label class="pie-chart-nav__name" for="">C</label>
-                                        <label class="pie-chart-nav__name" for="">D</label>
-                                        <label class="pie-chart-nav__name" for="">E</label>
+                                        <label class="pie-chart-nav__name" for="chart-aaa">Aaa</label>
+                                        <label class="pie-chart-nav__name" for="chart-bbbb">Bbbb</label>
+                                        <label class="pie-chart-nav__name" for="chart-cccc">Cccc</label>
+                                        <label class="pie-chart-nav__name" for="chart-dddd">Dddd</label>
+                                        <label class="pie-chart-nav__name" for="chart-eeee">Eeee</label>
                                     </div>
 
+                                    <input type="radio" name="chart-alphabet" id="chart-aaa" class="pie-chart-nav__radio pie-chart-nav__radio--aaa" checked>
+                                    <input type="radio" name="chart-alphabet" id="chart-bbbb" class="pie-chart-nav__radio pie-chart-nav__radio--bbbb">
+                                    <input type="radio" name="chart-alphabet" id="chart-cccc" class="pie-chart-nav__radio pie-chart-nav__radio--cccc">
+                                    <input type="radio" name="chart-alphabet" id="chart-dddd" class="pie-chart-nav__radio pie-chart-nav__radio--dddd">
+                                    <input type="radio" name="chart-alphabet" id="chart-eeee" class="pie-chart-nav__radio pie-chart-nav__radio--eeee">
+
+                                    <!-- when above radio is selected, manipulate dashboard__pie-charts-wrapper < pie chart -->
                                     <div class="dashboard__pie-charts-wrapper">
                                         
                                         <div class="pie-chart">
                                             <div class="pie-chart__wrapper">
-                                                <svg class"pie-chart__background">
-                                                    <circle r="80" cx="80" cy="80" class="ie-chart__inner-circle"></circle>
+                                                <svg class="pie-chart__background">
+                                                    <circle r="80" cx="80" cy="80" class="pie-chart__inner-circle"></circle>
                                                 </svg>
                                                 <div class="pie-chart__info"></div>
                                             </div>
                                             <h4 class="pie-chart__title">Title</h4>
                                         </div>
 
-                                        <div class="pie-chart">
+                                        <div class="pie-chart pie-chart--second">
                                             <div class="pie-chart__wrapper">
-                                                <svg class"pie-chart__background">
-                                                    <circle r="80" cx="80" cy="80" class="ie-chart__inner-circle"></circle>
+                                                <svg class="pie-chart__background">
+                                                    <circle r="80" cx="80" cy="80" class="pie-chart__inner-circle"></circle>
                                                 </svg>
                                                 <div class="pie-chart__info"></div>
                                             </div>

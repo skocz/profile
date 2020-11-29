@@ -1,0 +1,121 @@
+.pie-chart-nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: space-between;
+	transform: translateY(-25%);
+
+	.pie-chart-nav__name {
+		width: calc(100% / 3);
+		cursor: pointer;
+		padding: .5rem;
+		margin-bottom: -.5rem;
+		line-height: 1.1;
+		transition: color $transition-duration;
+
+		&:hover, &:focus { color: pink; }
+
+	}
+}
+
+.pie-chart-nav__radio {
+
+	position: absolute;
+	z-index: -10;
+
+	&:checked {
+
+		//aaa
+		&.pie-chart-nav__radio--aaa ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+			&:nth-of-type(1) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .73 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '73%'; }
+			}
+
+			&:nth-of-type(2) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .81 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '81%'; }
+			
+			}
+
+		}
+
+		//bbbb
+		&.pie-chart-nav__radio--bbbb ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+			&:nth-of-type(1) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .89 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '89%'; }
+			}
+
+			&:nth-of-type(2) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .89 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '89%'; }
+			
+			}
+
+		}
+
+		//cccc
+		&.pie-chart-nav__radio--cccc ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+			&:nth-of-type(1) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .10 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '10%'; }
+			}
+
+			&:nth-of-type(2) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .10 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '10%'; }
+			
+			}
+
+		}
+
+		//dddd
+		&.pie-chart-nav__radio--dddd ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+			&:nth-of-type(1) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .99 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '99%'; }
+			}
+
+			&:nth-of-type(2) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .98 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '98%'; }
+			
+			}
+
+		}
+
+		//eeee
+		&.pie-chart-nav__radio--eeee ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+			&:nth-of-type(1) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .70 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '70%'; }
+			}
+
+			&:nth-of-type(2) {
+
+				.pie-chart__inner-circle { stroke-dasharray: .70 * $chart-circumference, $chart-circumference; }
+				.pie-chart__info::after { content: '70%'; }
+			
+			}
+
+		}
+
+	}
+
+}
