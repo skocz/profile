@@ -26,7 +26,7 @@
             </label>
 
             <!-- Logo -->
-            <div class="sidebar__section">
+            <div class="sidebar__section sidebar__section--logo">
               <div class="sidebar-logo">
                 <a href="#" class="sidebar-logo__wrapper"><h1 class="sidebar-logo__text">
                   Welcome</h1>
@@ -35,7 +35,7 @@
             </div>
 
             <!-- User -->
-            <section class="sidebar__section">
+            <section class="sidebar__section sidebar__section--user">
                 <div class="sidebar-user">
 
                     <!-- user's Avatar -->
@@ -57,7 +57,7 @@
             </section>
 
             <!-- Navigation #1 -->
-            <section class="sidebar__section">
+            <section class="sidebar__section sidebar__section--nav">
                 <div class="sidebar-nav">
                     <h4 class="sidebar-nav__header" data-toggled-abbr="Nav">Navigation</h4>
                     <ul>
@@ -99,7 +99,7 @@
             </section>
 
             <!-- Navigation #2 -->
-            <section class="sidebar__section">
+            <section class="sidebar__section sidebar__section--nav">
                 <div class="sidebar-nav">
                     <h4 class="sidebar-nav__header" data-toggled-abbr="Com">Communication</h4>
                     <ul>
@@ -142,7 +142,7 @@
             </section>
 
             <!-- Navigation #3 -->
-            <section class="sidebar__section">
+            <section class="sidebar__section sidebar__section--nav">
                 <div class="sidebar-nav">
                     <h4 class="sidebar-nav__header" data-toggled-abbr="Set">Settings</h4>
                     <ul>
@@ -231,29 +231,29 @@
                         </div>
 
                     </div>
-                    <div class="navbar__section">
+                    <div class="navbar__section navbar__section--navbar-user">
 
                         <!-- user -->
  
-                    <div class="sidebar-user sidebar-user--mini">
+                        <div class="sidebar-user sidebar-user--mini">
 
-                        <!-- user's Avatar -->
-                        <div class="sidebar-user__avatar-wrapper">
-                            <!-- https://unsplash.com/photos/YA7JJrY1cF0 link to the photo -->
-                            <!-- https://unsplash.com/photos/7H5y2tmh0aU -->
-                            <img class="sidebar-user__avatar" src="photos/vlad-kutepov-YA7JJrY1cF0-unsplash.jpg" alt="User">
-                            <a href="#" class="sidebar-user__overlay">
-                                <i class="material-icons sidebar-user__icon">add_a_photo </i>
-                            </a>
+                            <!-- user's Avatar -->
+                            <div class="sidebar-user__avatar-wrapper">
+                                <!-- https://unsplash.com/photos/YA7JJrY1cF0 link to the photo -->
+                                <!-- https://unsplash.com/photos/7H5y2tmh0aU -->
+                                <img class="sidebar-user__avatar" src="photos/vlad-kutepov-YA7JJrY1cF0-unsplash.jpg" alt="User">
+                                <a href="#" class="sidebar-user__overlay">
+                                    <i class="material-icons sidebar-user__icon">add_a_photo </i>
+                                </a>
+                            </div>
+
+                            <!-- user's name and status  -->
+                            <div class="sidebar-user__name-wrapper">
+                                <a href="#" class="sidebar-user__name">Asia Sz.</a>
+                                <i class="sidebar-user__status sidebar-user__status--online">Online</i>
+                            </div>
+
                         </div>
-
-                        <!-- user's name and status  -->
-                        <div class="sidebar-user__name-wrapper">
-                            <a href="#" class="sidebar-user__name">Asia Sz.</a>
-                            <i class="sidebar-user__status sidebar-user__status--online">Online</i>
-                        </div>
-
-                    </div>
 
                     </div>
                     <div class="navbar__section">
@@ -313,7 +313,7 @@
 
                                     <table class="table">
                                         <thead class="table__thead">
-                                            <tr>
+                                            <tr class="table__tr table__tr--heading">
                                                 <th class="table__th table__th--sort-asc">Actions</th>
                                                 <th class="table__th">ID</th>
                                                 <th class="table__th">First Name</th>
@@ -326,19 +326,19 @@
                                         </thead>
                                         <tbody class="table__tbody">
                                             <tr class="table__tr">
-                                                <td class="table__td">
+                                                <td class="table__td" data-title="Actions">
                                                     <button class="material-icons table__action-icon">edit</button>
                                                     <button class="material-icons table__action-icon">delete</button>
                                                 </td>
-                                                <td class="table__td">1222</td>
-                                                <td class="table__td">Asia</td>
-                                                <td class="table__td">Sz</td>
-                                                <td class="table__td">email</td>
-                                                <td class="table__td">24/11/2020</td>
-                                                <td class="table__td">
+                                                <td class="table__td" data-title="ID">1222</td>
+                                                <td class="table__td" data-title="First Name">Asia</td>
+                                                <td class="table__td" data-title="Last Name">Sz</td>
+                                                <td class="table__td" data-title="Email">email</td>
+                                                <td class="table__td" data-title="Created">24/11/2020</td>
+                                                <td class="table__td" data-title="Onboarding">
                                                     <span class="table__onboarding table__onboarding--pending">Pending</span>
                                                 </td>
-                                                <td class="table__td">
+                                                <td class="table__td" data-title="Actions">
                                                     <input type="checkbox" id="more-actions" class="table__toggler">
                                                     <label for="more-actions" class="table__dots"></label>
                                                     <ul class="table__more-actions">
@@ -350,30 +350,30 @@
                                                 </td>
                                             </tr>
                                             <tr class="table__tr">
-                                                <td class="table__td">
+                                                <td class="table__td" data-title="Actions">
                                                     <button class="material-icons table__action-icon">edit</button>
                                                     <button class="material-icons table__action-icon">delete</button>
                                                 </td>
-                                                <td class="table__td">9991</td>
-                                                <td class="table__td">Asia</td>
-                                                <td class="table__td">Szzzzzz</td>
-                                                <td class="table__td">email.sz</td>
-                                                <td class="table__td">12/00/2018</td>
-                                                <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
-                                                <td class="table__td"><label class="table__dots">...</label></td>
+                                                <td class="table__td" data-title="ID">999</td>
+                                                <td class="table__td" data-title="First Name">Asia</td>
+                                                <td class="table__td" data-title="Last Name">Szzzzzz</td>
+                                                <td class="table__td" data-title="Email">email.sz</td>
+                                                <td class="table__td" data-title="Created">12/00/2018</td>
+                                                <td class="table__td" data-title="Onboarding"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
+                                                <td class="table__td" data-title="More Actions"><label class="table__dots">...</label></td>
                                              </tr>
                                             <tr class="table__tr">
-                                                <td class="table__td">
+                                                <td class="table__td" data-title="Actions">
                                                     <button class="material-icons table__action-icon">edit</button>
                                                     <button class="material-icons table__action-icon">delete</button>
                                                 </td>
-                                                <td class="table__td">1888</td>
-                                                <td class="table__td">Asia</td>
-                                                <td class="table__td">J</td>
-                                                <td class="table__td">email.js</td>
-                                                <td class="table__td">12/07/2020</td>
-                                                <td class="table__td"><span class="table__onboarding table__onboarding--pending table__onboarding--completed ">Pending</span></td>
-                                                <td class="table__td"><label class="table__dots">...</label></td>
+                                                <td class="table__td" data-title="ID">1888</td>
+                                                <td class="table__td" data-title="First Name">Asia</td>
+                                                <td class="table__td" data-title="Last Name">J</td>
+                                                <td class="table__td" data-title="Email">email.js</td>
+                                                <td class="table__td" data-title="Created">12/07/2020</td>
+                                                <td class="table__td" data-title="Onboarding"><span class="table__onboarding table__onboarding--pending table__onboarding--completed ">Pending</span></td>
+                                                <td class="table__td" data-title="More Actions"><label class="table__dots">...</label></td>
                                             </tr>
                                         </tbody>
                                     </table>

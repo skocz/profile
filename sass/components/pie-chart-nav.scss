@@ -27,7 +27,7 @@
 	&:checked {
 
 		//aaa
-		&.pie-chart-nav__radio--aaa ~ .dashboard__pie-charts-wrapper .pie-chart {
+		&.pie-chart-nav__radio--aaa~.dashboard__pie-charts-wrapper .pie-chart {
 
 			&:nth-of-type(1) {
 
@@ -45,7 +45,7 @@
 		}
 
 		//bbbb
-		&.pie-chart-nav__radio--bbbb ~ .dashboard__pie-charts-wrapper .pie-chart {
+		&.pie-chart-nav__radio--bbbb~.dashboard__pie-charts-wrapper .pie-chart {
 
 			&:nth-of-type(1) {
 
@@ -63,7 +63,7 @@
 		}
 
 		//cccc
-		&.pie-chart-nav__radio--cccc ~ .dashboard__pie-charts-wrapper .pie-chart {
+		&.pie-chart-nav__radio--cccc~.dashboard__pie-charts-wrapper .pie-chart {
 
 			&:nth-of-type(1) {
 
@@ -81,7 +81,7 @@
 		}
 
 		//dddd
-		&.pie-chart-nav__radio--dddd ~ .dashboard__pie-charts-wrapper .pie-chart {
+		&.pie-chart-nav__radio--dddd~.dashboard__pie-charts-wrapper .pie-chart {
 
 			&:nth-of-type(1) {
 
@@ -99,7 +99,7 @@
 		}
 
 		//eeee
-		&.pie-chart-nav__radio--eeee ~ .dashboard__pie-charts-wrapper .pie-chart {
+		&.pie-chart-nav__radio--eeee~.dashboard__pie-charts-wrapper .pie-chart {
 
 			&:nth-of-type(1) {
 

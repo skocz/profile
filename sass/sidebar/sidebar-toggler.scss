@@ -124,6 +124,23 @@
 
 			+ .sidebar {
 				height: 100vh;
+
+				.sidebar-toggler {
+					
+					.sidebar-toggler__icon{
+						background: transparent;
+
+						&::before, &::after {
+							top: 50%;
+							left: 50%;
+						}
+
+						&::before { transform: translate(-50%,-50%) rotate(-45deg); }
+						&::after { transform: translate(-50%,-50%) rotate(45deg); }
+					}
+				}
+
+				.sidebar__section.sidebar__section--logo { box-shadow: $shadow-20; }
 			}
 		}
 	}
@@ -146,6 +163,10 @@
 			&::before { top: -6px; }
 			&::after { top: 6px; }
 
+		}
+
+		&:focus, &:hover {
+			.sidebar-toggler__icon { background: $primary; }
 		}
 
 	}

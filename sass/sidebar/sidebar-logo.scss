@@ -24,9 +24,18 @@
   			transition: all 0.5s;
   			font-family: Iceland, cursive;
 		}
+
 		a:hover{
 			color: #ffffff;
   			animation: neon 1.5s ease-in-out infinite alternate;
 		}
+
 	}
+
+}
+
+@media (max-width: 48rem) {
+
+  .sidebar-logo { margin: 0; }
+  
 }

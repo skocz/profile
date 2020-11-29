@@ -84,3 +84,20 @@
 
 	}
 }
+
+@media (max-width: 62rem) {
+
+	.navbar-search__input {
+		transform: translateX(-50%);
+
+		&:focus {
+			width: calc(100% - 2rem);
+			top: 2rem;
+
+			& + .app { transform: translateY(8rem); }
+			
+		}
+
+	}
+	
+}
