@@ -37,7 +37,12 @@ $chart-circumference: 502.6548245744;
 
 	}
 
-	.pie-chart__wrapper { position: relative; }
+	.pie-chart__wrapper { 
+		position: relative;
+		display: flex;
+    	justify-content: center;
+   		align-items: center; 
+   	}
 
 	.pie-chart__info {
 		background: #fff;
@@ -46,7 +51,7 @@ $chart-circumference: 502.6548245744;
 		height: 4rem;
 		position: absolute;
 		z-index: 1;
-		right: 0;
+		right: 25%;
 		bottom: 0;
 		border-radius: 50%;
 
